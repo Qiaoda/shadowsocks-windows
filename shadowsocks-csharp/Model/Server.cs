@@ -100,7 +100,7 @@ namespace Shadowsocks.Model
                 Uri parsedUrl;
                 try
                 {
-                    parsedUrl = new Uri(decodedServerUrl);
+                    parsedUrl = new Uri(decodedServerUrl.TrimEnd('\n'));
                 }
                 catch (UriFormatException)
                 {
